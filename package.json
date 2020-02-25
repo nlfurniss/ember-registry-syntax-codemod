@@ -13,8 +13,20 @@
   "license": "MIT",
   "bin": "./bin/cli.js",
   "keywords": [
-    "codemod-cli"
+    "codemod-cli",
+    "codemod",
+    "codemods",
+    "ember",
+    "ember-codemod"
   ],
+  "homepage": "https://github.com/nlfurniss/ember-registry-syntax-codemod#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nlfurniss/ember-registry-syntax-codemod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nlfurniss/ember-registry-syntax-codemod/issues"
+  },
   "dependencies": {
     "codemod-cli": "^2.1.0"
   },
