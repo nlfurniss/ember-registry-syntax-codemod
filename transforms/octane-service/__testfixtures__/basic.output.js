@@ -7,9 +7,7 @@ export default class OnsiteToggles extends CommonOnsiteTogglesModule {
   })
   a11yNotification;
 
-  @service({
-    name: 'i18n'
-  })
+  @service('i18n')
   i18n;
 
   @tracked firstName;

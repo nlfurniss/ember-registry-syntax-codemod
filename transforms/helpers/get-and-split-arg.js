@@ -1,8 +1,8 @@
 /**
- * Helper that takes a node's argument and splits it by a given separator. Returns an array with the split values.
+ * Helper that takes a node's argument and splits it into an object with `type`, `namespace`, and `name` keys.
  * ex: service('namespace@name) ==> [ 'namespace', 'name' ]
  * @param {Object} arg
- * @returns {Array}
+ * @returns {Object}
  */
 function getAndSplitArg(arg) {
   let [type, prelimName] = arg.value.split(':');

@@ -2,6 +2,7 @@ const { getParser } = require('codemod-cli').jscodeshift;
 const { getOptions } = require('codemod-cli');
 const { getAndSplitArg } = require('../helpers/get-and-split-arg');
 const { createObjectExpression } = require('../helpers/create-object-expression');
+const { hasNameArgOnly } = require('../helpers/has-name-arg-only');
 
 module.exports = function transformer(file, api) {
   const j = getParser(api);
@@ -21,8 +22,13 @@ module.exports = function transformer(file, api) {
       }
 
       const args = getAndSplitArg(nodeArgs[0]);
-      const newValue = createObjectExpression(j, args);
-      node.arguments = [newValue];
+
+      // If the arg just has the name of the service, we want to leave it as-is
+      // See: https://github.com/emberjs/rfcs/blame/master/text/0585-improved-ember-registry-apis.md#L297
+      if (!hasNameArgOnly(args)) {
+        const newValue = createObjectExpression(j, args);
+        node.arguments = [newValue];
+      }
 
       return node;
     });
