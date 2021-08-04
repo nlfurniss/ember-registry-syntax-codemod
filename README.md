@@ -1,6 +1,6 @@
 # ember-registry-syntax-codemod
 
-__NOTE__: *The new registry API has not been implemented yet. This codemod was done in preperation for it landing.*
+**NOTE**: _The new registry API has not been implemented yet. This codemod was done in preperation for it landing._
 
 A collection of transforms to move from the deprecated registry micro-syntax to the new registry API (see [RFC](https://github.com/emberjs/rfcs/blob/master/text/0585-improved-ember-registry-apis.md)).
 
@@ -21,32 +21,31 @@ ember-registry-syntax-codemod <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 
 The codemod accepts the following options:
 
-| Option              | Value   | Default                         | Details                                                                                                                                          |
-| ------------------- | ------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| --quote             | String  | 'single'                        | Whether to use double or single quotes by default for new statements that are added during the codemod.                                          |
-
+| Option  | Value  | Default  | Details                                                                                                 |
+| ------- | ------ | -------- | ------------------------------------------------------------------------------------------------------- |
+| --quote | String | 'single' | Whether to use double or single quotes by default for new statements that are added during the codemod. |
 
 ## Transforms
 
-* lookup
-* register
-* unregister
-* inject
-* classic-service
-* octane-service
+- lookup
+- register
+- unregister
+- inject
+- classic-service
+- octane-service
 
 ## Contributing
 
 ### Installation
 
-* clone the repo
-* change into the repo directory
-* `yarn`
+- clone the repo
+- change into the repo directory
+- `yarn`
 
 ### Running tests
 
-* `yarn test`
+- `yarn test`
 
 ### Update Documentation
 
-* `yarn update-docs`
+- `yarn update-docs`

@@ -20,14 +20,14 @@ module.exports = function transformer(file, api) {
   //   })
   root
     .find(j.ClassProperty)
-    .map(nodePath => {
+    .map((nodePath) => {
       const { node } = nodePath;
       if (!node.decorators && node.decorators.length) {
         return null;
       }
 
       let serviceDecorator = null;
-      node.decorators.forEach(decorator => {
+      node.decorators.forEach((decorator) => {
         if (
           decorator.expression &&
           decorator.expression.callee &&
