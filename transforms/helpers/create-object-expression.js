@@ -6,7 +6,7 @@
 function createObjectExpression(j, args) {
   let properties = [];
 
-  Object.keys(args).forEach(key => {
+  Object.keys(args).forEach((key) => {
     const value = args[key];
     if (value != undefined) {
       properties.push(j.property('init', j.identifier(key), j.literal(args[key])));
