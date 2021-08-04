@@ -40,7 +40,7 @@
     "prettier": "^1.19.1"
   },
   "engines": {
-    "node": "8.* || 10.* || >= 12"
+    "node": ">= 12"
   },
   "jest": {
     "testEnvironment": "node"
