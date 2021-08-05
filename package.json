@@ -28,7 +28,7 @@
     "url": "https://github.com/nlfurniss/ember-registry-syntax-codemod/issues"
   },
   "dependencies": {
-    "codemod-cli": "^2.1.0"
+    "codemod-cli": "^3.2.0"
   },
   "devDependencies": {
     "coveralls": "^3.1.1",
